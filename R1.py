@@ -159,4 +159,9 @@ print(f"測試集 R2 分數: {model.score(X_test, y_test):.2f}")
 print(f"測試集 MAE (平均絕對誤差): {mean_absolute_error(y_test, y_test_pred):.2f}")
 
 
+'''
+恭喜完成第一關
+從一個數據集中挑選數據，並使用一個回歸模型，得到預測值和評分
 
+下一關請看R2.py
+'''

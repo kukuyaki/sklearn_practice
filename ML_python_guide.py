@@ -118,3 +118,17 @@ print(metrics.mean_squared_error(y_true, y_pred, squared=False)) # RMSE
     MSE (均方誤差)：誤差平方的平均。（會放大較大的誤差，對異常值敏感）
     RMSE (均方根誤差)：MSE 開根號。（兼具平方特性與原始單位）
     '''
+
+
+
+
+#7
+'''
+各個特徵的相關性，使用這個程式碼可幫助挑選預測輸出特徵時要用的輸入特徵
+'''
+numeric_df = df.select_dtypes(include=[np.number])
+
+# 2. 對純數字的 DataFrame 計算相關係數並畫圖
+plt.figure(figsize=(12, 10)) # 建議加上這行，避免圖太擠
+sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
+plt.show()
