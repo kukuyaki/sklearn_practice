@@ -53,3 +53,14 @@ numeric_df = df.select_dtypes(include=[np.number])
 plt.figure(figsize=(12, 10)) 
 sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
 plt.show()
+
+'''
+第三關也完成了
+複習一下
+R1我們嘗試了用線性回歸模型預測數據
+R2我們知道用窮舉法嘗試所有組合的弊端，也因此知道挑選好的輸入輸出特徵很重要
+R3我們用更聰明的方法看出特徵之間的相關性，可以更快的挑選好用的輸入輸出特徵組合
+
+下一步我們要來嘗試不同的模型
+C1.py 將會用SVC支援向量機來做分類問題
+'''

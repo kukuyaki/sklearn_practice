@@ -1,3 +1,7 @@
+'''
+這裡要來作支援向量機的練習
+'''
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
