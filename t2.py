@@ -1,14 +1,31 @@
+#數據處理
 import pandas as pd
+
+#sklearn前處理
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
 
+#sklearn模型
 from sklearn.ensemble import RandomForestClassifier
+
+#sklearn評分
 from sklearn.metrics import classification_report, confusion_matrix
 
+#sklearn其他工具
+from sklearn.pipeline import Pipeline
+
+#畫圖
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+
+
+
+
 # 1. 讀取與處理
-df = pd.read_csv('/home/kgforsure/Downloads/world cup datasets/player_stats.csv')
+df = pd.read_csv('/home/kgforsure/Documents/code/sklearn_practice/wcData/player_stats.csv')
 
 # 處理資料，根據需要的特徵分成X, y
 top_teams = df['team'].value_counts().nlargest(2).index
@@ -22,6 +39,11 @@ y = df_filtered['team']
 
 # 資料清洗
 numeric_features = X.select_dtypes(include=['int64', 'float64']).columns
+
+# 3. 切分資料
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
 
 # 2. 建立 Pipeline
 # 隨機森林其實不需要 StandardScaler，但保留它無妨，或可選擇註解掉
@@ -45,10 +67,6 @@ model = Pipeline(steps=[
     ))
 ])
 
-# 3. 切分資料
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
-)
 
 # 4. 訓練
 # 訓練後的model就是黑盒子，就直接拿來用
@@ -67,8 +85,7 @@ feat_imp = pd.Series(importances, index=numeric_features).sort_values(ascending=
 print("\n模型認為區分這兩國最重要的三個指標：")
 print(feat_imp.head(3))
 
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 plt.figure(figsize=(8, 6))
 sns.boxplot(data=df_filtered, x='team', y='pressures')
