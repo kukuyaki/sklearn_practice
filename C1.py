@@ -7,15 +7,11 @@ sex	性別	                    1 = 男性, 0 = 女性
 cp	胸痛類型	                 胸痛的型態 (Chest Pain Type)
 trestbps	 靜息血壓	         患者休息時的收縮壓 (單位：mmHg)
 chol	血清膽固醇	             血清中的總膽固醇濃度 (單位：mg/dl)
-
 fbs	空腹血糖	                 是否 > 120 mg/dl (1 = 是, 0 = 否)
-
 restecg	靜息心電圖	             休息時的心電圖結果 (Resting Electrocardiographic Results)
 thalach	最大心率	             運動時達到的最大心率 (Maximum Heart Rate Achieved)
-
 exang	運動誘發心絞痛	          運動是否引起胸痛 (1 = 是, 0 = 否)
 oldpeak	運動引起的 ST 段壓低	  與休息狀態相比，運動誘發的 ST 段壓低程度 (指標心肌受損程度)
-
 slope  ST 段斜率                 運動過程中 ST 段的傾斜坡度（指標心肌供血狀態）。
 ca    冠狀動脈鈣化數              使用螢光檢查看到的血管鈣化數量（0-3），與血管阻塞風險高度相關。
 thal   地中海貧血狀態             這裡通常指「心肌灌注檢查」的結果，是一個很強的病理指標。

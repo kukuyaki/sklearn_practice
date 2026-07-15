@@ -18,7 +18,7 @@ grid = GridSearchCV(model, param_grid, cv=5, scoring='recall')
 cv代表我們要將原始數據切成幾份，跑幾次交叉驗證
 scoring代表要用哪一個指標去決定最後的最佳模型
 
-我們從這行程式碼中發現，GridSearchCV()步驟其實是直接取代原本的model訓練model.fit()的。
+我們從這行程式碼中發現，GridSearchCV()步驟其實是直接取代原本的model.fit()的。
 
 
 age	年齡	                    患者的年齡
