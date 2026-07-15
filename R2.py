@@ -72,9 +72,7 @@ from sklearn.pipeline import Pipeline
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# ==========================================
-# 1. 讀取與篩選資料
-# ==========================================
+
 def liner_report(df,a,b):
     # df = pd.read_csv("/home/kgforsure/Documents/code/sklearn_practice/wcData/player_stats.csv")
     # X = df[['xa','xg','shots_total','progressive_carries']]
@@ -93,9 +91,6 @@ def liner_report(df,a,b):
         ))
     ])
     model.fit(X_train, y_train)
-    # ==========================================
-    # 5. 實際預測範例
-    # ==========================================
     os.system('cls' if os.name == 'nt' else 'clear')
     end_time = time.time()
     print(end_time - start_time)
