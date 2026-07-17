@@ -68,7 +68,7 @@ uv 是一個極速的 Python 套件與專案管理工具
 它整合了套件安裝、虛擬環境管理、Python 版本管理等功能，執行速度比傳統的 pip、virtualenv 快上 10-100 倍
 
 要來教讀者怎麼用
-```
+
 先安裝
 Linux or maxOS
 ```
@@ -87,7 +87,7 @@ Windows
 ```
     uv --version
 ```
-``` 
+
 
 你會看到repo裡面有pyproject.toml文件，我已經再裡面寫好了我們在這個專案上會用到的函式庫
 直接使用這行，自動建立環境
