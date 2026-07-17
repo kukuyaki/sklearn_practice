@@ -71,14 +71,22 @@ uv 是一個極速的 Python 套件與專案管理工具
 ```
 先安裝
 Linux or maxOS
+```
     curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 Windows
+```
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
 或你也可以直接用pytohn安裝
+```
     pip install uv
+```
 
 最後用這個確定下載好了
+```
     uv --version
+```
 ``` 
 
 你會看到repo裡面有pyproject.toml文件，我已經再裡面寫好了我們在這個專案上會用到的函式庫
