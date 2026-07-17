@@ -1,6 +1,6 @@
 # 機器學習
 
-
+```
 機器學習 (Machine Learning)
 │
 ├── 1. 監督學習 (Supervised Learning)
@@ -35,6 +35,8 @@
     └── 演員-評論家 (Actor-Critic)
         ├── A3C, DDPG, SAC (Soft Actor-Critic)
         └── Decision Transformer (將 RL 視為序列建模)
+```
+
 
 非監督式學習是「嬰兒的自主觀察」，是直覺，讓機器能透過觀察發現規律，並寫下規律，如書本
 監督式學習是「老師指導的課堂」，是智慧，讓機器閱讀書本資料後變得聰明，能強化自身的判斷
