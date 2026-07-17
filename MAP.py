@@ -15,11 +15,4 @@ T3.py
 
 非監督學習 TODO
 U1.py
-U2.py
-U3.py
-
-
-強化學習 TODO
-
-
 '''
