@@ -8,11 +8,11 @@ C1.py
 C2.py
 C3.py
 
-T1.py TODO
+T1.py
 T2.py
 T3.py
 
 
-非監督學習 TODO
+非監督學習
 U1.py
 '''
