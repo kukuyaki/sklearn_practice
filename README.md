@@ -36,8 +36,66 @@
         ├── A3C, DDPG, SAC (Soft Actor-Critic)
         └── Decision Transformer (將 RL 視為序列建模)
 ```
+# 本倉庫瀏覽順序
+'''
+監督學習
+    R1.py
+    R2.py
+    R3.py
+
+    C1.py
+    C2.py
+    C3.py
+
+    T1.py
+    T2.py
+    T3.py
+    T4.py
 
 
+非監督學習
+    U1.py
+
+深度學習
+請到RL_practice repositories
+'''
+
+# 執行程式碼說明
+因為我是在linux系統上撰寫，會有許多麻煩的python 函式庫安裝的問題
+所以我會用uv管理工具來管理我的python 函式庫
+
+uv 是一個極速的 Python 套件與專案管理工具
+它整合了套件安裝、虛擬環境管理、Python 版本管理等功能，執行速度比傳統的 pip、virtualenv 快上 10-100 倍
+
+要來教讀者怎麼用
+'''
+先安裝
+Linux or maxOS
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+Windows
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+或你也可以直接用pytohn安裝
+    pip install uv
+
+最後用這個確定下載好了
+    uv --version
+''' 
+
+你會看到repo裡面有pyproject.toml文件，我已經再裡面寫好了我們在這個專案上會用到的函式庫
+直接使用這行，自動建立環境
+'''
+uv sync
+'''
+之後就直接用
+'''
+uv run your.py
+'''
+比如說
+uv run T1.py
+
+其他uv指令就請大家去看uv官網拉
+
+# 三大範式嘮叨
 非監督式學習是「嬰兒的自主觀察」，是直覺，讓機器能透過觀察發現規律，並寫下規律，如書本
 監督式學習是「老師指導的課堂」，是智慧，讓機器閱讀書本資料後變得聰明，能強化自身的判斷
 強化學習是「生存的競技場」，是肌肉，將學習來的強大判斷能力，變成和現實世界互動的可能
